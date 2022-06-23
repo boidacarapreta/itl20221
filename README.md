@@ -21,5 +21,5 @@ flowchart LR
         MicroBit0 -- rádio --> Microbit9[Micro:bit - Bairro 9]
     end
 
-    click Raspberry "blob/main/mesa-de-controle.py"
+    click Raspberry "https://github.com/boidacarapreta/itl20221/blob/main/mesa-de-controle.py"
 ```
