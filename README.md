@@ -5,20 +5,21 @@ Projeto de uma maquete viva feita com componentes elétricos, microcontrolados (
 ```mermaid
 flowchart LR
     subgraph Mesa de Controle
-        Xbox0([Xbox One Controller]) -- USB --> Raspberry0[Raspberry Pi]
+        direction TB
+        Joystick([Joystick]) -- USB --> Raspberry0(Raspberry Pi)
         Raspberry0 -- serial --> MicroBit0[Micro:bit]
     end
 
     subgraph Cidade
-        MicroBit0 -- rádio --> MicroBit1[Micro:bit - Bairro 1]
-        MicroBit0 -- rádio --> MicroBit2[Micro:bit - Bairro 2]
-        MicroBit0 -- rádio --> MicroBit3[Micro:bit - Bairro 3]
-        MicroBit0 -- rádio --> MicroBit4[Micro:bit - Bairro 4]
-        MicroBit0 -- rádio --> MicroBit5[Micro:bit - Bairro 5]
-        MicroBit0 -- rádio --> MicroBit6[Micro:bit - Bairro 6]
-        MicroBit0 -- rádio --> MicroBit7[Micro:bit - Bairro 7]
-        MicroBit0 -- rádio --> MicroBit8[Micro:bit - Bairro 8]
-        MicroBit0 -- rádio --> MicroBit9[Micro:bit - Bairro 9]
+        MicroBit0 -. rádio .-> MicroBit1[Micro:bit - Bairro 1]
+        MicroBit0 -. rádio .-> MicroBit2[Micro:bit - Bairro 2]
+        MicroBit0 -. rádio .-> MicroBit3[Micro:bit - Bairro 3]
+        MicroBit0 -. rádio .-> MicroBit4[Micro:bit - Bairro 4]
+        MicroBit0 -. rádio .-> MicroBit5[Micro:bit - Bairro 5]
+        MicroBit0 -. rádio .-> MicroBit6[Micro:bit - Bairro 6]
+        MicroBit0 -. rádio .-> MicroBit7[Micro:bit - Bairro 7]
+        MicroBit0 -. rádio .-> MicroBit8[Micro:bit - Bairro 8]
+        MicroBit0 -. rádio .-> MicroBit9[Micro:bit - Bairro 9]
     end
 ```
 
@@ -44,4 +45,4 @@ Para os módulos com Micro:bit, cada um deles possui repositório próprio, o qu
 
 - [Mesa de controle](https://boidacarapreta.github.io/itl20221-mesa-de-controle/)
 - Bairros:
-  - [2](https://boidacarapreta.github.io/itl20221-bairro-2/)
+  - [5](https://boidacarapreta.github.io/itl20221-bairro-5/)
