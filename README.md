@@ -5,8 +5,8 @@ Projeto de uma maquete viva feita com componentes elétricos, microcontrolados (
 ```mermaid
 flowchart LR
     subgraph Mesa de Controle
-        Xbox([Xbox One Controller]) -- USB --> Raspberry[Raspberry Pi]
-    Raspberry -- serial --> MicroBit0[Micro:bit]
+        Xbox0([Xbox One Controller]) -- USB --> Raspberry0[Raspberry Pi]
+        Raspberry0 -- serial --> MicroBit0[Micro:bit]
     end
 
     subgraph Cidade
@@ -21,5 +21,7 @@ flowchart LR
         MicroBit0 -- rádio --> Microbit9[Micro:bit - Bairro 9]
     end
 
-    click Raspberry "https://github.com/boidacarapreta/itl20221/blob/main/mesa-de-controle.py"
+    click Raspberry0 "https://github.com/boidacarapreta/itl20221/blob/main/mesa-de-controle.py"
+    click Microbit0 "https://github.com/boidacarapreta/itl20221/blob/main/mesa-de-controle.js"
+    click Microbit2 "https://github.com/boidacarapreta/itl20221/blob/main/bairro-2.js"
 ```
