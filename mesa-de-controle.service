@@ -1,0 +1,16 @@
+# Systemd service
+
+[Unit]
+Description=Mesa de Controle
+After=multi-user.target
+
+[Service]
+User=<user>
+Type=simple
+WorkingDirectory=<path>
+ExecStart=<path>/<virtual-env>/bin/python -u mesa-de-controle.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
