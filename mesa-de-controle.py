@@ -10,7 +10,10 @@ def main():
     # Definir as variáveis da porta serial
     serial_port = getenv("SERIAL_PORT", default="/dev/ttyACM0")
     serial_speed = getenv("SERIAL_SPEED", default=115200)
-    rasp = serial.Serial(serial_port, serial_speed)
+    try:
+        rasp = serial.Serial(serial_port, serial_speed)
+    except:
+        rasp = None
 
     # Iniciar o pygame e relógio interno
     pygame.init()
@@ -24,18 +27,28 @@ def main():
 
     # Mapear os botões e bairros
     botoes = {
-        5: 3,  # Bairro 5 = botão 3 (Y)
-        6: 0,  # Bairro 5 = botão 0 (A)
-        7: 2,  # Bairro 5 = botão 2 (X)
-        8: 1  # Bairro 5 = botão 1 (B)
+        1: 3, # Bairro 1 = botão 3 (Y)
+        2: 0, # Bairro 2 = botão 0 (A)
+        3: 2, # Bairro 3 = botão 2 (X)
+        4: 1, # Bairro 4 = botão 1 (B)
+        5: 4, # Bairro 5 = botão 4 (LB)
+        6: 5, # Bairro 6 = botão 5 (RB)
+        7: 6, # Bairro 7 = botão 6 (Back)
+        8: 7, # Bairro 8 = botão 7 (Start)
+        9: 8, # Bairro 9 = botão 8 (Xbox)
     }
 
     # Iniciar os estados dos bairros
     estados = {
+        1: False,
+        2: False,
+        3: False,
+        4: False,
         5: False,
         6: False,
         7: False,
-        8: False
+        8: False,
+        9: False
     }
 
     # Entrar em loop (até haver algum problema com joystick)
@@ -51,8 +64,11 @@ def main():
                             # Montar a mensagem para enviar pela serial
                             mensagem = str(botao) + \
                                 str(int(estados[botao])) + "\n"
-                            # Escrever na porta serial
-                            rasp.write(mensagem.encode())
+                            # Escrever na porta serial (ou em stdout)
+                            if rasp:
+                                rasp.write(mensagem.encode())
+                            else:
+                                print(mensagem)
 
         # Aguardar 1 segundo
         clock.tick(1000)
