@@ -32,7 +32,7 @@ Todo o código está disponível para consulta. Para a Raspberry Pi da mesa de c
 python3 -m venv .venv
 
 # Carregar o ambiente virtual
-. .venv/bin/activate
+source .venv/bin/activate
 
 # Uma vez dentro do ambiente virtual, instalar as dependências
 pip install -r requirements.txt 
