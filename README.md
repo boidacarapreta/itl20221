@@ -28,7 +28,7 @@ flowchart LR
 Todo o código está disponível para consulta. Para a Raspberry Pi da mesa de controle, tem o [arquivo feito em Python versão 3](https://github.com/boidacarapreta/itl20221/blob/main/mesa-de-controle.py). Para executá-lo, pode-se usar ambiente virtual (_virtual environment_):
 
 ```sh
-# Criar o ambiente virtual
+# Criar o ambiente virtual (na família Debian é preciso o pacote python3-env)
 python3 -m venv .venv
 
 # Carregar o ambiente virtual
