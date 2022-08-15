@@ -46,3 +46,5 @@ Para os módulos com Micro:bit, cada um deles possui repositório próprio, o qu
 - [Mesa de controle](https://boidacarapreta.github.io/itl20221-mesa-de-controle/)
 - Bairros:
   - [5](https://boidacarapreta.github.io/itl20221-bairro-5/)
+
+Para validar individualmente cada módulo de bairro, há um [teste de tensão](https://boidacarapreta.github.io/itl20221-teste-de-tensao/).
